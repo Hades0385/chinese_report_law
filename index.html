@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/70755374" type="image/x-icon" />
+    <title>法治教育</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .section-divider {
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            border-radius: 2px;
+            width: 80px;
+            margin: 1rem 0;
+        }
+        .nav-link.active {
+            border-bottom: 3px solid #3b82f6;
+            color: #1e40af;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 24px;
+        }
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 4px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #3b82f6;
+        }
+        .timeline-item:after {
+            content: "";
+            position: absolute;
+            left: 6px;
+            top: 22px;
+            width: 2px;
+            height: calc(100% + 12px);
+            background: #d1d5db;
+        }
+        .timeline-item:last-child:after {
+            display: none;
+        }
+        .legal-highlight {
+            border-left: 4px solid #3b82f6;
+            padding-left: 16px;
+            margin: 16px 0;
+            background-color: #eff6ff;
+            padding: 12px 16px;
+            border-radius: 0 4px 4px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 頁首 -->
+    <header class="bg-gradient-to-r from-blue-700 to-indigo-800 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-4xl font-bold tracking-tight text-center">法治教育專題報告</h1>
+            <p class="mt-4 text-xl text-center max-w-3xl mx-auto">透過電影與文學作品探索社會正義與法治議題</p>
+        </div>
+    </header>
+
+    <!-- 導航欄 -->
+    <nav class="bg-white shadow-md sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex space-x-8">
+                    <a href="#home" class="inline-flex items-center px-1 pt-1 text-gray-900 text-sm font-medium">首頁</a>
+                    <a href="#parasite" class="inline-flex items-center px-1 pt-1 text-gray-500 hover:text-gray-900 text-sm font-medium">《寄生上流》</a>
+                    <a href="#animalfarm" class="inline-flex items-center px-1 pt-1 text-gray-500 hover:text-gray-900 text-sm font-medium">《動物農莊》</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要內容 -->
+    <main class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <!-- 首頁介紹 -->
+        <section id="home" class="mb-16">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="p-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">法治教育專題報告</h2>
+                    <div class="section-divider"></div>
+                    <p class="text-lg text-gray-700 mb-6">
+                        本報告透過一部電影與一部文學作品，探討社會階級、權力結構、法律正義等議題。
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mt-10">
+                        <div class="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <h3 class="text-2xl font-bold text-blue-800 mb-3">《寄生上流》</h3>
+                            <p class="text-gray-700">探討社會階級不平等與法律制度如何影響不同階層的人們。</p>
+                            <a href="#parasite" class="mt-4 inline-block px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">了解更多</a>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-purple-50 to-pink-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <h3 class="text-2xl font-bold text-purple-800 mb-3">《動物農莊》</h3>
+                            <p class="text-gray-700">探討權力腐敗、法律被扭曲的過程以及公平正義的重要性。</p>
+                            <a href="#animalfarm" class="mt-4 inline-block px-6 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors">了解更多</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 寄生上流 -->
+        <section id="parasite" class="mb-16">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="relative h-80 overflow-hidden">
+                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100%" height="100%" fill="#1a1a1a"/>
+                        <path d="M0,100 Q200,150 400,100 T800,100 V300 H0 Z" fill="#333"/>
+                        <path d="M0,150 Q200,200 400,150 T800,150 V300 H0 Z" fill="#222"/>
+                        <text x="400" y="150" font-family="'Noto Sans TC'" font-size="48" font-weight="bold" text-anchor="middle" fill="#fff">寄生上流</text>
+                        <text x="400" y="200" font-family="'Noto Sans TC'" font-size="24" text-anchor="middle" fill="#ccc">Parasite</text>
+                    </svg>
+                </div>
+                
+                <div class="p-8">
+                    <!-- 電影簡介 -->
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">電影簡介</h2>
+                    <div class="section-divider"></div>
+                    <div class="flex flex-col md:flex-row gap-8 mb-10">
+                        <div class="md:w-1/3">
+                            <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+                                <svg viewBox="0 0 300 450" xmlns="http://www.w3.org/2000/svg" class="w-full">
+                                    <rect width="100%" height="100%" fill="#1a1a1a"/>
+                                    <rect x="20" y="20" width="260" height="410" rx="5" fill="#333"/>
+                                    <!-- 封面圖片 -->
+                                    <image href="https://i0.wp.com/readbooks.com.tw/wp-content/uploads/2020/07/%E5%AF%84%E7%94%9F%E4%B8%8A%E6%B5%81.jpeg?resize=600%2C805&ssl=1"
+                                           x="40" y="40" width="220" height="300" preserveAspectRatio="xMidYMid slice" />
+                                    <text x="150" y="370" font-family="'Noto Sans TC'" font-size="14" text-anchor="middle" fill="#fff">奉俊昊 導演</text>
+                                    <text x="150" y="390" font-family="'Noto Sans TC'" font-size="14" text-anchor="middle" fill="#fff">2019</text>
+                                  </svg>
+                                  
+                            </div>
+                            <div class="mt-4 bg-gray-100 p-4 rounded-lg">
+                                <p class="text-sm text-gray-700"><strong>導演：</strong>奉俊昊</p>
+                                <p class="text-sm text-gray-700"><strong>年份：</strong>2019</p>
+                                <p class="text-sm text-gray-700"><strong>國家：</strong>韓國</p>
+                                <p class="text-sm text-gray-700"><strong>獎項：</strong>第92屆奧斯卡金像獎最佳影片、最佳導演、最佳原創劇本、最佳國際電影</p>
+                            </div>
+                        </div>
+                        <div class="md:w-2/3">
+                            <p class="text-lg text-gray-700 mb-4">
+                                《寄生上流》是一部2019年韓國黑色喜劇驚悚片，由奉俊昊執導。影片講述了一個貧窮家庭通過各種手段逐漸滲透進一個富裕家庭的故事，揭示了韓國社會中的階級差異和不平等。
+                            </p>
+                            <p class="text-lg text-gray-700 mb-4">
+                                這部電影成為首部獲得奧斯卡最佳影片的非英語電影，同時也獲得了最佳導演、最佳原創劇本和最佳國際電影獎項，創造了電影史上的重要里程碑。
+                            </p>
+                            <p class="text-lg text-gray-700">
+                                《寄生上流》以其尖銳的社會批判、精湛的敘事手法和出色的視覺語言，成為探討社會階級議題的重要作品，也為法治教育提供了豐富的討論素材。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 劇情介紹 -->
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2 mt-12">劇情介紹</h2>
+                    <div class="section-divider"></div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">完整劇情與法律視角</h3>
+                        
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-medium text-gray-900">貧困的起點</h4>
+                            <p class="mt-2 text-gray-700">
+                                電影開始於首爾市一個半地下室公寓，金氏一家四口——父親基澤（宋康昊飾）、母親忠淑（張惠珍飾）、兒子基宇（崔宇植飾）和女兒基婭（朴素丹飾）——生活在極度貧困中。他們靠摺披薩盒維生，甚至需要蹭用鄰居的Wi-Fi。當基宇的朋友民赫提供機會，讓他替代自己成為富裕朴家的英語家教時，金家看到了改變命運的機會。
+                            </p>
+                            <div class="legal-highlight mt-3">
+                                <p class="text-blue-800">
+                                    <strong>法律視角：</strong>影片開端即展現了社會經濟不平等如何影響基本生活權利的獲取。法治社會應確保所有公民獲得基本生活保障和平等機會，但現實中的貧富差距往往導致資源分配不均，使弱勢群體難以通過合法途徑改變處境。
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-medium text-gray-900">身份欺詐與滲透</h4>
+                            <p class="mt-2 text-gray-700">
+                                基宇成功獲得朴家英語家教職位後，發現朴家的母親（趙汝貞飾）單純且容易被操縱。他精心策劃，讓妹妹基婭假扮為「潔西卡」，一位知名藝術治療師，成功獲聘為朴家兒子達宋的藝術老師。隨後，金家又通過設計陷害朴家的司機和管家文光，讓父親基澤和母親忠淑分別取代了這兩個職位。整個過程中，金家成員偽造文件、編造身份，甚至誣陷他人，但朴家完全不知情。
+                            </p>
+                            <div class="legal-highlight mt-3">
+                                <p class="text-blue-800">
+                                    <strong>法律視角：</strong>金家的行為涉及多項違法行為，包括偽造文件、欺詐、誹謗和侵犯隱私。從法律角度看，這些都是應受懲罰的犯罪行為。然而，電影引發思考：當社會制度無法為底層民眾提供合法上升通道時，違法行為是否成為他們唯一的選擇？法治教育不僅應強調遵守法律的重要性，也應關注社會公正與機會平等對法治社會的意義。
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-medium text-gray-900">階級的象徵與隔閡</h4>
+                            <p class="mt-2 text-gray-700">
+                                電影中多次出現「氣味」的隱喻，朴先生（李善均飾）多次提到金基澤身上的「氣味」——一種「地鐵裡的味道」。這種氣味成為階級的象徵，無論金家如何努力融入上流社會，這種「氣味」始終標記著他們的出身。同時，朴家的豪宅與金家的半地下室形成鮮明對比，暴雨場景更是直觀展示了階級差異：朴家在雨中享受著「露營」的樂趣，而金家卻因暴雨失去了家園。
+                            </p>
+                            <div class="legal-highlight mt-3">
+                                <p class="text-blue-800">
+                                    <strong>法律視角：</strong>法律面前人人平等是法治社會的基本原則，但現實中的「隱形歧視」往往難以通過法律手段解決。電影中的「氣味」隱喻揭示了即使沒有明確的法律歧視，社會階層間的隔閡和偏見仍然存在。法治教育應關注如何通過法律和政策減少這種隱形歧視，促進實質平等。
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-medium text-gray-900">地下室的秘密</h4>
+                            <p class="mt-2 text-gray-700">
+                                電影的轉折點出現在朴家全家外出露營的一晚。金家在朴家享受著暫時的「上流生活」，卻被前管家文光的突然回訪打斷。文光揭露了朴家地下室中隱藏著她的丈夫根浩（朴明勳飾），他因債務問題已在地下室密室躲藏多年。這一發現揭示了更深層次的「寄生」關係，也暗示了社會底層之間的競爭與矛盾。
+                            </p>
+                            <div class="legal-highlight mt-3">
+                                <p class="text-blue-800">
+                                    <strong>法律視角：</strong>地下室密室情節揭示了法律保護的缺失如何影響最弱勢群體。根浩因債務問題被迫躲藏，反映了破產法和債務保護機制的不足。同時，這一情節也展現了社會底層之間的競爭關係——當資源稀缺時，弱勢群體往往被迫相互競爭而非團結合作。法治教育應關注如何建立更完善的社會保障體系，避免弱勢群體陷入絕境。
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-medium text-gray-900">暴力的爆發</h4>
+                            <p class="mt-2 text-gray-700">
+                                電影高潮發生在朴家兒子達宋的生日派對上。當天早些時候，金家在朴家地下室與文光夫婦發生激烈衝突，導致文光死亡，而根浩則逃脫。在派對上，根浩突然出現，用刀刺傷了基婭。基澤目睹女兒受傷，加上朴先生對屍體氣味的厭惡反應，憤怒爆發，他殺死了朴先生。最終，基澤躲入朴家地下室的密室，基宇則承諾有朝一日會賺錢買下這棟房子，解救父親。
+                            </p>
+                            <div class="legal-highlight mt-3">
+                                <p class="text-blue-800">
+                                    <strong>法律視角：</strong>電影結尾的暴力爆發可視為社會不公長期積累後的必然結果。從法律角度看，基澤的行為構成謀殺罪，但電影引導觀眾思考導致這一悲劇的深層社會原因。法治社會不僅需要懲罰犯罪，更需要預防犯罪——通過建立更公平的社會制度，減少極端不平等，避免社會矛盾激化至暴力衝突的地步。
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-medium text-gray-900">結局與反思</h4>
+                            <p class="mt-2 text-gray-700">
+                                電影結尾，基宇寫信給父親，表達了希望通過努力工作、賺錢，有朝一日買下朴家房子解救父親的願望。然而，這個願望在現實的社會經濟結構中幾乎不可能實現，暗示了階級流動的困難。最後的畫面回到金家的半地下室，暗示著無論發生什麼，社會結構和階級差異依然存在，循環往復。
+                            </p>
+                            <div class="legal-highlight mt-3">
+                                <p class="text-blue-800">
+                                    <strong>法律視角：</strong>電影結尾的「不可能的夢想」反映了當代社會中法律平等與實質平等的差距。形式上的法律平等無法自動轉化為實質的機會平等。法治教育應當超越單純的法律條文學習，關注如何通過法律和政策促進社會公正，創造真正的機會平等，使每個人都能在法治框架內實現自身價值和社會流動。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8 rounded-r-lg">
+                        <h4 class="text-xl font-bold text-blue-800 mb-2">劇情與法治教育的連結</h4>
+                        <p class="text-blue-800 mb-3">
+                            《寄生上流》的劇情通過一個家庭的悲劇，揭示了多層次的法律與社會議題：
+                        </p>
+                        <ul class="list-disc pl-5 text-blue-800 space-y-2">
+                            <li><strong>法律平等與實質平等的差距</strong> - 法律形式上對所有人平等，但社會經濟地位的差異導致實質不平等</li>
+                            <li><strong>犯罪行為的社會根源</strong> - 極端不平等的社會環境如何推動人們做出違法行為</li>
+                            <li><strong>法律保護的局限性</strong> - 法律如何未能保護社會最弱勢的群體</li>
+                            <li><strong>社會契約的破裂</strong> - 當社會無法為所有成員提供基本保障時，法律的權威性受到挑戰</li>
+                            <li><strong>階級固化與社會流動</strong> - 法律制度如何可能強化而非打破階級壁壘</li>
+                        </ul>
+                        <p class="text-blue-800 mt-3">
+                            這些議題提醒我們，法治教育不應僅限於教導遵守法律，還應培養對社會正義的關注和批判性思考能力，思考如何建立更公平、更包容的法治社會。
+                        </p>
+                    </div>
+
+                    <!-- 電影的社會背景 -->
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2 mt-12">電影的社會背景</h2>
+                    <div class="section-divider"></div>
+                    <p class="text-lg text-gray-700 mb-4">
+                        《寄生上流》反映了當代韓國社會中日益擴大的貧富差距和階級固化問題。影片中的半地下室住宅是韓國城市中真實存在的住房類型，通常由低收入家庭居住。
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4">
+                        韓國的高失業率、教育機會不平等以及社會流動性下降等問題，都在電影中得到了直接或間接的呈現。這些社會問題不僅存在於韓國，也是全球許多國家面臨的共同挑戰。
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6 my-6">
+                        <div class="bg-gray-100 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">經濟不平等</h3>
+                            <p class="text-gray-700">
+                                電影展現了極端的貧富差距，從金氏家庭的半地下室到朴氏家庭的豪華別墅，形成鮮明對比。這種經濟不平等導致了社會資源分配不均，進而影響法律資源的獲取和司法公正。
+                            </p>
+                        </div>
+                        <div class="bg-gray-100 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">階級固化</h3>
+                            <p class="text-gray-700">
+                                影片中的「氣味」隱喻暗示了階級差異的不可逾越性。即使金氏家庭成功地進入了上流社會的空間，他們仍然無法真正融入，這反映了社會流動性的缺乏和階級固化的現實。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 議題探討 -->
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2 mt-12">議題探討</h2>
+                    <div class="section-divider"></div>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">1. 法律平等與社會現實的矛盾</h3>
+                        <p class="text-lg text-gray-700 mb-4">
+                            法律理論上對所有人一視同仁，但《寄生上流》揭示了社會經濟地位如何影響個人獲取法律保護和資源的能力。金氏家庭的行為雖然違法，但他們的處境也反映了社會制度的不公。
+                        </p>
+                        <p class="text-lg text-gray-700 mb-4">
+                            電影引發我們思考：在極度不平等的社會中，法律是否能真正實現公平正義？當生存成為首要問題時，法律的約束力是否會被削弱？
+                        </p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">2. 社會契約與階級衝突</h3>
+                        <p class="text-lg text-gray-700 mb-4">
+                            電影中的悲劇源於社會契約的破裂。當社會無法為所有成員提供基本的生存和發展機會時，遵守法律和社會規範的動機就會減弱。
+                        </p>
+                        <p class="text-lg text-gray-700 mb-4">
+                            影片結尾的暴力衝突可以被視為階級矛盾激化的必然結果，提醒我們社會公正和法治建設的重要性。
+                        </p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">3. 法律教育與社會責任</h3>
+                        <p class="text-lg text-gray-700 mb-4">
+                            《寄生上流》提醒我們，法治教育不僅是關於法律條文的學習，更應包括對社會公正、平等和人權的理解與尊重。
+                        </p>
+                        <p class="text-lg text-gray-700 mb-4">
+                            真正的法治社會需要建立在經濟相對平等、機會公平的基礎上，這需要政府、企業和公民的共同努力。
+                        </p>
+                    </div>
+
+                    <!-- 影片欣賞 -->
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2 mt-12">影片欣賞</h2>
+                    <div class="section-divider"></div>
+                    <div class="bg-opacity-0 rounded-lg p-4 relative">
+                        <div class="relative w-full" style="padding-top: 56.25%;">
+                          <iframe 
+                            class="absolute top-0 left-0 w-full h-full rounded-lg"
+                            src="https://www.youtube.com/embed/ago2YKiZPd0"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                          </iframe>
+                        </div>
+                      </div>
+                      
+                    <div class="mt-6 bg-yellow-50 border-l-4 border-yellow-500 p-4">
+                        <p class="text-yellow-800">
+                            <strong>觀影提示：</strong>觀看影片時，請特別關注以下幾個關鍵場景，思考其中蘊含的法律與社會議題：
+                        </p>
+                        <ul class="list-disc pl-5 mt-2 text-yellow-800">
+                            <li>金氏家庭偽造文件應聘的場景</li>
+                            <li>朴社長談論金基澤「越線」的對話</li>
+                            <li>暴雨後兩個家庭生活對比的場景</li>
+                            <li>地下室發現前管家丈夫的情節</li>
+                            <li>最後的生日派對衝突場景</li>
+                        </ul>
+                    </div>
+
+                    <!-- 結論 -->
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2 mt-12">結論</h2>
+                    <div class="section-divider"></div>
+                    <p class="text-lg text-gray-700 mb-4">
+                        《寄生上流》不僅是一部出色的電影作品，更是一面映照社會現實的鏡子。它通過一個家庭的故事，揭示了社會階級分化、經濟不平等以及法律制度面臨的挑戰。
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4">
+                        從法治教育的角度看，這部電影提醒我們：法律的公正執行需要建立在社會公平的基礎上。當社會資源分配極度不均時，法律的權威性和有效性都會受到挑戰。
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4">
+                        真正的法治社會，不僅需要完善的法律體系，更需要消除極端貧富差距，為每個公民提供平等的機會和尊嚴。這部電影的價值在於它不僅展示了問題，也促使我們思考解決之道。
+                    </p>
+                    <div class="bg-blue-100 p-6 rounded-lg mt-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">思考問題</h3>
+                        <ol class="list-decimal pl-5 text-blue-800">
+                            <li class="mb-2">在極度不平等的社會中，法律是否能真正實現公平正義？</li>
+                            <li class="mb-2">如何平衡個人生存需求與法律規範之間的關係？</li>
+                            <li class="mb-2">建立真正公平的法治社會，需要哪些社會條件和制度保障？</li>
+                            <li>電影中的哪些情節對您的法律觀念產生了衝擊或啟發？</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 動物農莊 -->
+        <section id="animalfarm" class="mb-16">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="relative h-80 overflow-hidden">
+                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100%" height="100%" fill="#2c3e50"/>
+                        <path d="M0,100 Q200,50 400,100 T800,100 V300 H0 Z" fill="#34495e"/>
+                        <path d="M0,150 Q200,200 400,150 T800,150 V300 H0 Z" fill="#2c3e50"/>
+                        <text x="400" y="150" font-family="'Noto Sans TC'" font-size="48" font-weight="bold" text-anchor="middle" fill="#ecf0f1">動物農莊</text>
+                        <text x="400" y="200" font-family="'Noto Sans TC'" font-size="24" text-anchor="middle" fill="#bdc3c7">Animal Farm</text>
+                    </svg>
+                </div>
+                
+                <div class="p-8">
+                    <!-- 書名與簡介 -->
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">書名：《動物農莊》</h2>
+                    <div class="section-divider"></div>
+                    <div class="flex flex-col md:flex-row gap-8 mb-10">
+                        <div class="md:w-1/3">
+                            <div class="bg-opacity-0 rounded-lg overflow-hidden shadow-lg">
+                                <svg viewBox="0 0 280 380" xmlns="http://www.w3.org/2000/svg" class="w-full">
+                                    <image href="https://im2.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/092/14/0010921435.jpg&v=6246d448k&w=348&h=348" x="40" y="40" width="200" height="280" preserveAspectRatio="xMidYMid slice"/>
+                                    <text x="140" y="350" font-family="'Noto Sans TC'" font-size="14" text-anchor="middle" fill="#000000">喬治·歐威爾</text>
+                                    <text x="140" y="370" font-family="'Noto Sans TC'" font-size="14" text-anchor="middle" fill="#fff">1945</text>
+                                  </svg>
+                                  
+                            </div>
+                            <div class="mt-4 bg-gray-100 p-4 rounded-lg">
+                                <p class="text-sm text-gray-700"><strong>作者：</strong>喬治·歐威爾 (George Orwell)</p>
+                                <p class="text-sm text-gray-700"><strong>出版年份：</strong>1945年</p>
+                                <p class="text-sm text-gray-700"><strong>類型：</strong>政治寓言小說</p>
+                                <p class="text-sm text-gray-700"><strong>原文：</strong>英文</p>
+                            </div>
+                        </div>
+                        <div class="md:w-2/3">
+                            <p class="text-lg text-gray-700 mb-4">
+                                《動物農莊》是英國作家喬治·歐威爾於1945年出版的政治寓言小說，被視為20世紀最重要的文學作品之一。這部作品通過農場動物起義推翻人類主人，建立自己理想社會的故事，諷刺了極權主義政治體制，特別是對蘇聯斯大林統治時期的批判。
+                            </p>
+                            <p class="text-lg text-gray-700 mb-4">
+                                小說以簡潔有力的寓言形式，揭示了權力如何腐蝕理想，以及法律如何被統治者操縱和扭曲。書中著名的「所有動物生而平等，但有些動物比其他動物更平等」這一句話，成為了描述特權階層與法律雙重標準的經典表述。
+                            </p>
+                            <p class="text-lg text-gray-700">
+                                這部作品對於理解法治精神的重要性、權力制衡的必要性以及法律平等原則具有深刻的啟示意義，是法治教育的重要素材。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 作者簡介 -->
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2 mt-12">作者簡介</h2>
+                    <div class="section-divider"></div>
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="md:w-1/4">
+                            <div class="bg-gray-200 rounded-full overflow-hidden shadow-lg aspect-square">
+                                <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" class="w-full">
+                                    <defs>
+                                      <clipPath id="circleClip">
+                                        <circle cx="150" cy="150" r="130" />
+                                      </clipPath>
+                                    </defs>
+                                    <image href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN898POpDNoQUwvkcRFztbd2DAwEe5AHtpsg&s"
+                                           x="0" y="15" width="300" height="300"
+                                           clip-path="url(#circleClip)" preserveAspectRatio="xMidYMid slice" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <p class="text-lg text-gray-700 mb-4">
+                                喬治·歐威爾（George Orwell，1903-1950），原名艾瑞克·亞瑟·布萊爾（Eric Arthur Blair），是20世紀最具影響力的英國作家和評論家之一。他以犀利的政治觀察和對極權主義的批判而聞名。
+                            </p>
+                            <p class="text-lg text-gray-700 mb-4">
+                                歐威爾曾在緬甸擔任警察，親身經歷了殖民統治的不公；在西班牙內戰中參戰，目睹了極權主義的崛起；這些經歷深刻影響了他的政治觀點和創作。
+                            </p>
+                            <p class="text-lg text-gray-700 mb-4">
+                                除《動物農莊》外，他的另一部代表作《一九八四》同樣是對極權社會的深刻批判，兩部作品都對現代政治思想和法治理念產生了深遠影響。
+                            </p>
+                            <p class="text-lg text-gray-700">
+                                歐威爾的作品核心關注點是真相、自由和正義，他警告人們警惕權力濫用和語言扭曲對社會的危害，這些思想對現代法治建設仍具有重要啟示。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 劇情介紹 -->
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2 mt-12">劇情介紹</h2>
+                    <div class="section-divider"></div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">完整劇情與法律視角</h3>
+                        
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-medium text-gray-900">革命的起源</h4>
+                            <p class="mt-2 text-gray-700">
+                                故事開始於英國的莊園農場（Manor Farm），農場主瓊斯先生因酗酒而疏於管理農場。一天晚上，農場中最受尊敬的老豬老少校（Old Major）召集所有動物，向他們描述了一個沒有人類壓迫的理想世界，並教導他們革命歌曲《英格蘭的獸》。老少校去世後不久，在豬拿破崙（Napoleon）和雪球（Snowball）的領導下，農場動物們發動起義，成功驅逐了瓊斯先生，並將農場改名為「動物農莊」（Animal Farm）。
+                            </p>
+                            <div class="legal-highlight mt-3">
+                                <p class="text-purple-800">
+                                    <strong>法律視角：</strong>這一階段體現了社會契約理論中的「自然狀態」向「社會狀態」的轉變。動物們推翻人類統治，建立新秩序，類似於人類社會中的革命。從法治角度看，這反映了當現有法律制度無法保障基本權利時，人民有權推翻不公正的統治，建立新的法律秩序。然而，這也提出了重要問題：新建立的秩序如何避免重蹈覆轍？
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-medium text-gray-900">七條戒律的制定</h4>
+                            <p class="mt-2 text-gray-700">
+                                革命成功後，豬作為最聰明的動物，制定了「動物主義」（Animalism）的核心原則——七條戒律，並寫在穀倉的牆上：
+                                <ol class="list-decimal pl-8 mt-2 text-gray-700">
+                                    <li>凡兩足者，皆為敵人。</li>
+                                    <li>凡四足者或有翼者，皆為朋友。</li>
+                                    <li>動物不得穿衣。</li>
+                                    <li>動物不得睡床。</li>
+                                    <li>動物不得飲酒。</li>
+                                    <li>動物不得殺害其他動物。</li>
+                                    <li>所有動物一律平等。</li>
+                                </ol>
+                                這些原則被簡化為一句口號：「四條腿好，兩條腿壞」。動物們熱情地投入農場工作，相信自己正在建設一個平等、自由的新社會。
+                            </p>
+                            <div class="legal-highlight mt-3">
+                                <p class="text-purple-800">
+                                    <strong>法律視角：</strong>七條戒律代表了憲法或基本法的制定，是新社會秩序的基礎。這些原則體現了平等、自由和反對壓迫的價值觀，類似於現代法治社會中的基本人權保障。從法治教育角度看，這一階段展示了法律如何體現社會共識和價值觀，以及成文法對於維護社會秩序的重要性。然而，後續發展也揭示了僅有法律條文而缺乏執行和監督機制的危險。
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-medium text-gray-900">權力鬥爭與分裂</h4>
+                            <p class="mt-2 text-gray-700">
+                                隨著時間推移，豬拿破崙和雪球在農場管理上產生分歧。雪球提出建造風車的計劃，希望通過技術進步改善所有動物的生活；而拿破崙則反對這一計劃。在一次會議上，拿破崙突然釋放他秘密培養的猛犬，驅逐了雪球，並宣布取消今後的民主會議，由豬組成的委員會做出所有決定。雪球被驅逐後，拿破崙改變立場，宣布將建造風車，並聲稱這一直是他的計劃。
+                            </p>
+                            <div class="legal-highlight mt-3">
+                                <p class="text-purple-800">
+                                    <strong>法律視角：</strong>這一階段展示了權力集中和民主制度崩潰的過程。從法治角度看，這反映了三權分立和權力制衡的重要性。當立法、行政和司法權力集中在單一群體手中時，法律容易被操縱和濫用。拿破崙通過暴力手段消除政治對手，取消民主程序，這種行為在現代法治社會中被視為違憲和非法。這提醒我們，法治不僅需要良法，還需要防止權力過度集中的制度保障。
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-medium text-gray-900">法律的扭曲與修改</h4>
+                            <p class="mt-2 text-gray-700">
+                                隨著拿破崙權力的鞏固，七條戒律開始被悄悄修改。當豬開始睡在床上時，第四條戒律被改為「動物不得睡有床單的床」；當豬開始飲酒時，第五條被改為「動物不得過量飲酒」；當拿破崙處決所謂的「叛徒」時，第六條被改為「動物不得無故殺害其他動物」。每次修改都由豬斯奎拉（Squealer）負責解釋，他善於操縱語言，使其他動物相信自己記錯了原來的戒律。最終，七條戒律被簡化為一條：「所有動物生而平等，但有些動物比其他動物更平等」。
+                            </p>
+                            <div class="legal-highlight mt-3">
+                                <p class="text-purple-800">
+                                    <strong>法律視角：</strong>這一階段揭示了法律如何被掌權者操縱和扭曲。從法治教育角度看，這反映了法律穩定性和透明度的重要性。當法律可以被隨意修改，且修改過程不透明時，法律就失去了其保障公正的功能，淪為統治工具。斯奎拉對法律的「解釋」展示了如何通過語言操縱來扭曲法律原意，這在現代法學中被稱為「法律解釋的政治化」。這提醒我們，法治社會需要獨立的司法機構和公開透明的立法程序。
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-medium text-gray-900">特權階層的形成</h4>
+                            <p class="mt-2 text-gray-700">
+                                隨著時間推移，豬與其他動物的差距越來越大。豬開始穿衣服、用兩條腿走路、住在農舍裡，享受特殊待遇。他們不勞動，卻獲得最好的食物。口號「四條腿好，兩條腿壞」被改為「四條腿好，兩條腿更好」。其他動物的生活條件並未改善，甚至比瓊斯時代更糟，但斯奎拉通過操縱數據和記憶，使動物們相信生活在改善。
+                            </p>
+                            <div class="legal-highlight mt-3">
+                                <p class="text-purple-800">
+                                    <strong>法律視角：</strong>這一階段展示了法律平等原則的崩潰和特權階層的形成。從法治角度看，這反映了「法律面前人人平等」原則的重要性。當執法者和立法者自己凌駕於法律之上時，法治就名存實亡。豬享有特權而不受法律約束，這種現象在現代法學中被稱為「法律的雙重標準」。這提醒我們，真正的法治要求所有人（包括統治者）都受到法律約束，沒有人能享有法律豁免權。
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-medium text-gray-900">與人類的和解與墮落</h4>
+                            <p class="mt-2 text-gray-700">
+                                故事結尾，拿破崙邀請鄰近農場的人類來參觀動物農莊，並與他們進行交易和合作。在一次宴會上，豬和人類一起喝酒、玩牌，關係融洽。當其他動物透過窗戶觀看時，他們已經無法分辨豬和人類，因為兩者看起來完全一樣。小說以一句意味深長的話結束：「從外面看，從豬到人，從人到豬，再從豬到人，已經不可能分辨誰是誰了。」
+                            </p>
+                            <div class="legal-highlight mt-3">
+                                <p class="text-purple-800">
+                                    <strong>法律視角：</strong>結尾揭示了革命的徹底失敗和循環——新的統治者與被推翻的舊統治者沒有本質區別。從法治教育角度看，這反映了權力腐蝕的普遍性和制度設計的重要性。無論初衷多麼崇高，如果缺乏有效的權力制衡機制，任何統治者都可能濫用權力。這提醒我們，法治社會需要持續的公民參與和監督，需要多元的權力結構和制衡機制，以防止權力集中和腐敗。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-purple-50 border-l-4 border-purple-500 p-6 my-8 rounded-r-lg">
+                        <h4 class="text-xl font-bold text-purple-800 mb-2">劇情與法治教育的連結</h4>
+                        <p class="text-purple-800 mb-3">
+                            《動物農莊》的寓言故事為法治教育提供了豐富的討論素材：
+                        </p>
+                        <ul class="list-disc pl-5 text-purple-800 space-y-2">
+                            <li><strong>法律的制定與變更</strong> - 七條戒律從制定到被扭曲的過程，展示了法律如何反映社會價值觀，也如何被掌權者操縱</li>
+                            <li><strong>權力制衡的重要性</strong> - 拿破崙驅逐雪球、取消民主會議的情節，揭示了缺乏權力制衡機制的危險</li>
+                            <li><strong>法律平等原則</strong> - 「所有動物生而平等，但有些動物比其他動物更平等」這一矛盾表述，揭示了法律雙重標準的本質</li>
+                            <li><strong>資訊控制與法治</strong> - 斯奎拉通過操縱語言和記憶來扭曲法律，展示了資訊透明對法治的重要性</li>
+                            <li><strong>公民教育與參與</strong> - 大多數動物因缺乏教育而無法有效監督權力，反映了公民教育對維護法治的重要性</li>
+                        </ul>
+                        <p class="text-purple-800 mt-3">
+                            這些主題提醒我們，法治不僅是法律條文的集合，更是一種需要不斷維護的社會價值和制度安排。真正的法治需要權力制衡、公民參與、資訊透明和法律平等等多方面的保障。
+                        </p>
+                    </div>
+
+                    <!-- 議題探討 -->
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2 mt-12">議題探討</h2>
+                    <div class="section-divider"></div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">1. 法律的制定與變更</h3>
+                        <p class="text-lg text-gray-700 mb-4">
+                            《動物農莊》中，七條戒律最初是作為動物革命的基本法則而制定的，代表著平等和公正的理念。然而，隨著豬群掌握權力，這些法則被逐漸修改，最終只剩下「所有動物生而平等，但有些動物比其他動物更平等」這一條。
+                        </p>
+                        <div class="bg-amber-50 border-l-4 border-amber-500 p-4 my-4">
+                            <p class="text-amber-800">
+                                <strong>法律啟示：</strong>這一過程揭示了法律如何被掌權者操縱和扭曲。在缺乏透明度、公眾監督和權力制衡的情況下，法律可能成為統治者的工具，而非保障公正的機制。
+                            </p>
+                        </div>
+                        <p class="text-lg text-gray-700">
+                            這提醒我們，法治社會需要建立健全的立法程序、司法獨立和公民參與機制，以防止法律被少數人控制和濫用。
+                        </p>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">2. 權力與腐敗</h3>
+                        <p class="text-lg text-gray-700 mb-4">
+                            小說中，拿破崙和其他豬從最初的革命領導者逐漸變成了新的壓迫者，他們享受特權，違反自己制定的規則，最終與人類農場主沒有區別。
+                        </p>
+                        <div class="bg-amber-50 border-l-4 border-amber-500 p-4 my-4">
+                            <p class="text-amber-800">
+                                <strong>法律啟示：</strong>權力不受制約必然導致腐敗。法治社會需要建立有效的權力制衡機制，確保執法者和立法者同樣受到法律約束，沒有人能凌駕於法律之上。
+                            </p>
+                        </div>
+                        <p class="text-lg text-gray-700">
+                            這一主題強調了憲政民主、權力分立和法律監督機制的重要性，這些都是現代法治國家的基本特徵。
+                        </p>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">3. 宣傳與真相</h3>
+                        <p class="text-lg text-gray-700 mb-4">
+                            在《動物農莊》中，豬群通過宣傳部長斯奎拉不斷扭曲事實，修改歷史，使其他動物相信現狀是進步的結果。當動物們懷疑七條戒律被修改時，斯奎拉總能說服他們是記憶錯誤。
+                        </p>
+                        <div class="bg-amber-50 border-l-4 border-amber-500 p-4 my-4">
+                            <p class="text-amber-800">
+                                <strong>法律啟示：</strong>法治社會需要保障資訊自由和言論自由，確保公民能獲取真實資訊，對權力運作進行監督。當真相被壟斷和扭曲時，法律的公正執行也無法保證。
+                            </p>
+                        </div>
+                        <p class="text-lg text-gray-700">
+                            這提醒我們，媒體自由、資訊透明和公民教育是維護法治的重要條件，只有在真相得到尊重的社會中，法律才能真正發揮作用。
+                        </p>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">4. 教育與公民意識</h3>
+                        <p class="text-lg text-gray-700 mb-4">
+                            小說中，大多數動物因缺乏教育而無法閱讀七條戒律的變化，也無法有效質疑領導層的決定。他們的無知使他們容易被操縱和控制。
+                        </p>
+                        <div class="bg-amber-50 border-l-4 border-amber-500 p-4 my-4">
+                            <p class="text-amber-800">
+                                <strong>法律啟示：</strong>法治社會需要有受教育的公民，他們了解自己的權利和義務，能夠參與公共事務並監督權力運作。法律教育是公民教育的重要組成部分。
+                            </p>
+                        </div>
+                        <p class="text-lg text-gray-700">
+                            這強調了普及法律知識、培養公民意識和批判性思維的重要性，這些都是維護法治社會的基礎。
+                        </p>
+                    </div>
+
+                    <!-- 結論 -->
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2 mt-12">結論</h2>
+                    <div class="section-divider"></div>
+                    <p class="text-lg text-gray-700 mb-4">
+                        《動物農莊》雖然是一部寓言小說，但它對權力、法律和社會正義的深刻洞察，使其成為法治教育的重要素材。通過這部作品，我們可以理解法治不僅是法律條文的集合，更是一種需要不斷維護的社會價值和制度安排。
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4">
+                        小說提醒我們，法律的公正性取決於多種因素：權力的制衡、公民的參與、資訊的透明以及教育的普及。當這些條件缺失時，即使有完善的法律條文，也可能被扭曲和濫用。
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4">
+                        在當代社會，歐威爾的警示仍然具有重要意義。面對各種形式的權力濫用和資訊操控，我們需要保持警覺，維護法治的基本原則，確保法律真正成為保障公平正義的工具，而非少數人控制多數人的手段。
+                    </p>
+                    <div class="bg-green-100 p-6 rounded-lg mt-6">
+                        <h3 class="text-xl font-bold text-green-800 mb-3">思考問題</h3>
+                        <ol class="list-decimal pl-5 text-green-800">
+                            <li class="mb-2">如何建立有效的權力制衡機制，防止法律被少數人操控？</li>
+                            <li class="mb-2">在資訊爆炸的時代，公民如何辨別真相，監督法律的公正執行？</li>
+                            <li class="mb-2">法律教育應該包含哪些內容，才能培養具有批判性思維的公民？</li>
+                            <li>《動物農莊》中的哪些情節對您理解法治精神有所啟發？</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="bg-gray-800 text-white py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-2xl font-bold">法治教育專題報告</h2>
+                    <p class="mt-2 text-gray-300">透過電影與文學作品探索社會正義與法治議題</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-2">製作</h3>
+                    <p class="text-gray-300">web made with canva AI by 蔡孟倉</p>
+                    <p class="text-gray-300">組員：李暐盛、范宇翔、陳威宇、蔡孟倉、賴泉守</p>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>© since 2025 法治教育專題報告 - 本網站僅供教學演示使用</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 平滑滾動效果
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // 導航欄高亮當前部分
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                
+                if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+                    currentSection = '#' + section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-gray-900', 'border-b-2', 'border-blue-500');
+                link.classList.add('text-gray-500');
+                
+                if (link.getAttribute('href') === currentSection) {
+                    link.classList.remove('text-gray-500');
+                    link.classList.add('text-gray-900', 'border-b-2', 'border-blue-500');
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9300e6b4950d4a84',t:'MTc0NDYwOTU3MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
